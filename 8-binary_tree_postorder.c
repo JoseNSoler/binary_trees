@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * binary_tree_postorder - goes through a binary tree using pre-order traversal.
+ * binary_tree_postorder - goes for a binary tree using post-order traversal.
  *
  * Args:
  *      @tree: node to tree to liberate.
