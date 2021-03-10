@@ -1,21 +1,21 @@
 #include "binary_trees.h"
-#include <stdlib.h>
 
 /**
- * binary_tree_height - goes for a binary tree using post-order traversal.
- * @tree: node to tree to liberate.
- * Return: 0 if tree is NULL, 1 if there is something left or right, 2 if both
- */
+* binary_tree_is_leaf - Check if the tree is a leaf
+* @node: node
+* Return: 0 if it not is a leaft, 1 if yes.
+*/
 
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if (!tree)
-		return (0);
+	size_t x = 0;
 
-	if (tree->left && tree->right)
-		return (2);
-	else if (tree->left || tree->right)
-		return (1);
+	if(tree->right != NULL && tree->left != NULL)
+		return((x+2));
+	else if(tree->right != NULL || tree->left != NULL)
+		return((x+1));
 	else
-		return (0);
+		return(x);
+
+	return (1);
 }
