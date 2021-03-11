@@ -1,13 +1,13 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_perfect - check if a binary tree is perfect.
+ * binary_tree_sibling - check for the brother of a node.
  *
  * Args:
- *      @tree: node to tree to check.
+ *      @node: node to tree to check.
  *
  *
- * Return: 1 yes, 0 not.
+ * Return: NULL if node not exists or not have parent, otherwise the brother
  */
 
 binary_tree_t *binary_tree_sibling(binary_tree_t *node)
