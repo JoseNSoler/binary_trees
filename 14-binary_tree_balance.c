@@ -6,6 +6,7 @@ int get_count(const binary_tree_t *tree);
  * @tree: pointer to root node
  * Return: balance factor of the binary tree
  */
+
 int binary_tree_balance(const binary_tree_t *tree)
 {
     int l_count, r_count;
@@ -19,6 +20,7 @@ int binary_tree_balance(const binary_tree_t *tree)
     r_count = get_count(tree->right);
     return (l_count - r_count);
 }
+
 
 /**
 * get_count - count the height of a binary tree
