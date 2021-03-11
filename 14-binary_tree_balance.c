@@ -8,16 +8,16 @@ int get_count(const binary_tree_t *tree);
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-    int l_count, r_count;
+	int l_count, r_count;
 
-    if (tree == NULL)
-        return (0);
-    if (tree->left == NULL && tree->right == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
+	if (tree->left == NULL && tree->right == NULL)
+		return (0);
 
-    l_count = get_count(tree->left);
-    r_count = get_count(tree->right);
-    return (l_count - r_count);
+	l_count = get_count(tree->left);
+	r_count = get_count(tree->right);
+	return (l_count - r_count);
 }
 
 /**
@@ -28,15 +28,15 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 int get_count(const binary_tree_t *tree)
 {
-    int left, right;
+	int left, right;
 
-    if (tree == NULL)
-        return (0);
-    left = get_count(tree->left) + 1;
-    right = get_count(tree->right) + 1;
+	if (tree == NULL)
+		return (0);
+	left = get_count(tree->left) + 1;
+	right = get_count(tree->right) + 1;
 
-    if (left > right)
-        return (left);
-    else
-        return (right);
+	if (left > right)
+		return (left);
+	else
+		return (right);
 }
