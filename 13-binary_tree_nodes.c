@@ -1,18 +1,17 @@
 #include "binary_trees.h"
 
 /**
-* binary_tree_height - function that measures the height of a binary tree
+* binary_tree_nodes - Count nodes with at least 1 child in the tree
 * @tree: pointer to start of tree.
-* Return: 2 on two leafs, 1 in one leaf on any side,  and 0 on NULL
+* Return: 0 if tree NULL.
 */
 
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
-	size_t childs;
-
-	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
+	if (tree == NULL)
 		return (0);
 
+<<<<<<< HEAD
 	if (tree->right && tree->left)
 	{
 		childs = binary_tree_nodes(tree->right) + 1;
@@ -26,4 +25,9 @@ size_t binary_tree_nodes(const binary_tree_t *tree)
 		childs += 1;
 
 	return (childs);
+=======
+	if (tree->left || tree->right)
+		return (binary_tree_nodes(tree->left) + binary_tree_nodes(tree->right) + 1);
+	return (0);
+>>>>>>> b5690ecab70e4d89b4553421901a382e8bb06ebd
 }
